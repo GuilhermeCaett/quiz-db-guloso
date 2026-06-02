@@ -1,0 +1,16 @@
+<svg width="660" height="150" viewBox="0 0 660 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10 15)">
+    <path d="M20 36c18-22 61-25 83-2l-6 10H24l-4-8Z" fill="#276749"/>
+    <path d="M27 45h67l-10 31H38L27 45Z" fill="#E6A645"/>
+    <path d="M33 45h56" stroke="#F7E7BF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M63 29c11-12 24-16 38-13-1 14-10 25-27 29" stroke="#A7D7BC" stroke-width="6" stroke-linecap="round"/>
+    <path d="M69 45c8-14 17-23 31-29" stroke="#A7D7BC" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="46" cy="38" r="4" fill="#F7E7BF"/>
+    <circle cx="61" cy="32" r="4" fill="#F7E7BF"/>
+    <circle cx="76" cy="39" r="4" fill="#F7E7BF"/>
+  </g>
+  <text x="126" y="101" fill="#153E34" font-family="Georgia, serif" font-size="66" font-weight="700" font-style="italic">Diabético</text>
+  <text x="416" y="101" fill="#D88A29" font-family="Georgia, serif" font-size="66" font-weight="700" font-style="italic">Guloso</text>
+  <path d="M130 119c142 17 329 14 485-8" stroke="#378264" stroke-width="7" stroke-linecap="round"/>
+  <path d="M420 121c63 0 125-5 193-15" stroke="#E6A645" stroke-width="4" stroke-linecap="round"/>
+</svg>
