@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153e34" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Obrigado! | Diabético Guloso</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --forest: #153e34;
+        --forest-2: #1d5745;
+        --leaf: #276749;
+        --mint: #e4f1ea;
+        --mint-2: #f3f8f4;
+        --gold: #d88a29;
+        --ink: #20332d;
+        --muted: #63736d;
+        --line: #deebe4;
+        --cream: #fbfcf8;
+        --white: #fff;
+        --shadow: 0 18px 50px rgba(21, 62, 52, .14);
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "DM Sans", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      a { -webkit-tap-highlight-color: transparent; text-decoration: none; color: inherit; }
+      img { display: block; max-width: 100%; }
+
+      /* HEADER */
+      .header {
+        background: var(--forest);
+        padding: 18px 0;
+        text-align: center;
+      }
+      .logo {
+        display: inline-block;
+        width: min(220px, 60vw);
+        height: auto;
+        filter: brightness(0) invert(1);
+        opacity: .96;
+      }
+
+      /* HERO */
+      .hero {
+        background: var(--forest);
+        padding: 42px 20px 52px;
+        text-align: center;
+        color: white;
+      }
+      .hero-icon {
+        display: inline-flex;
+        width: 72px;
+        height: 72px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,.13);
+        margin-bottom: 20px;
+      }
+      .hero-icon svg {
+        width: 38px;
+        height: 38px;
+        color: #f2b85a;
+      }
+      .hero h1 {
+        font-family: Lora, Georgia, serif;
+        font-size: clamp(2rem, 7vw, 3rem);
+        line-height: 1.1;
+        color: white;
+        max-width: 640px;
+        margin: 0 auto 16px;
+      }
+      .hero p {
+        color: #d3e7dd;
+        font-size: 1rem;
+        line-height: 1.65;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      /* MAIN */
+      .main {
+        flex: 1;
+        padding: 40px 20px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      /* CTA CARD */
+      .cta-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        padding: 32px 28px;
+        max-width: 560px;
+        width: 100%;
+        text-align: center;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--leaf);
+        font-size: .74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .eyebrow svg { width: 14px; height: 14px; }
+      .cta-card h2 {
+        font-family: Lora, Georgia, serif;
+        font-size: clamp(1.45rem, 5vw, 1.9rem);
+        color: var(--forest);
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .cta-card p {
+        color: var(--muted);
+        font-size: .94rem;
+        line-height: 1.62;
+        margin-bottom: 24px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        min-height: 56px;
+        padding: 0 24px;
+        border-radius: 8px;
+        background: var(--gold);
+        color: white;
+        font-family: "DM Sans", Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        animation: pulse 1.6s infinite;
+        transition: transform .18s ease, box-shadow .18s ease;
+      }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(216,138,41,.28); }
+      .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+      @keyframes pulse {
+        50% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(216,138,41,.12); }
+      }
+      .btn-note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: .76rem;
+      }
+
+      /* CHECKLIST */
+      .checklist-card {
+        background: var(--mint-2);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px 28px;
+        max-width: 560px;
+        width: 100%;
+      }
+      .checklist-card h3 {
+        font-family: Lora, Georgia, serif;
+        color: var(--forest);
+        font-size: 1.05rem;
+        margin-bottom: 16px;
+      }
+      .checklist {
+        display: grid;
+        gap: 12px;
+        list-style: none;
+      }
+      .checklist li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: #44574f;
+        font-size: .9rem;
+        line-height: 1.5;
+      }
+      .checklist svg {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        color: var(--leaf);
+        margin-top: 1px;
+      }
+
+      /* SUPORTE */
+      .suporte {
+        max-width: 560px;
+        width: 100%;
+        text-align: center;
+        color: var(--muted);
+        font-size: .82rem;
+        line-height: 1.6;
+        padding: 0 8px;
+      }
+      .suporte strong { color: var(--forest); }
+
+      /* FOOTER */
+      .footer {
+        padding: 22px 20px;
+        background: var(--forest);
+        color: #c8ddd4;
+        text-align: center;
+        font-size: .74rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 480px) {
+        .cta-card, .checklist-card { padding: 24px 18px; }
+        .hero { padding: 32px 16px 40px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <img class="logo" src="./assets/logo-diabetico-guloso.svg" alt="Diabético Guloso" />
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <h1>Compra confirmada!<br/>Bem-vinda ao Diabético Guloso.</h1>
+      <p>Sua decisão foi tomada. Agora é só acessar e começar a cozinhar.</p>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- CTA -->
+      <div class="cta-card">
+        <p class="eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/>
+          </svg>
+          Acesso liberado agora
+        </p>
+        <h2>Suas receitas estão prontas para você</h2>
+        <p>Clica no botão abaixo para acessar o app com todas as suas receitas personalizadas — direto pelo celular, sem precisar instalar nada.</p>
+        <a class="btn" href="https://webapp-diabetico-guloso.vercel.app/" target="_blank" rel="noopener">
+          Acessar minhas receitas agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14m-6-6 6 6-6 6"/>
+          </svg>
+        </a>
+        <p class="btn-note">Acesso imediato • Funciona no celular e no computador</p>
+      </div>
+
+      <!-- CHECKLIST -->
+      <div class="checklist-card">
+        <h3>O que você acabou de desbloquear:</h3>
+        <ul class="checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            <span><strong>Mais de 50 receitas</strong> organizadas por categoria — brigadeiros, bolos, pudins, mousses e tortas</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            <span><strong>Lista de compras para diabéticos</strong> com ingredientes acessíveis de mercado</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            <span><strong>Acesso pelo celular</strong> para consultar qualquer receita na hora que precisar</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            <span><strong>Receitas sem açúcar refinado</strong> com menor impacto glicêmico</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SUPORTE -->
+      <div class="suporte">
+        <p>Algum problema com o acesso? Entre em contato:<br/>
+        <strong>suporte@diabeticoguloso.com.br</strong></p>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      Diabético Guloso • Receitas gostosas para uma rotina mais leve.<br/>
+      Monitore sua glicemia conforme a orientação do seu profissional de saúde.
+    </footer>
+
+  </body>
+</html>
