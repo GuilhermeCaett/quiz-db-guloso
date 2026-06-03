@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153e34" />
+    <meta name="robots" content="index, follow" />
+    <title>Diabético Guloso — Sobremesas gostosas para quem tem diabetes</title>
+    <meta name="description" content="Mais de 50 receitas de sobremesas sem açúcar refinado, com ingredientes de mercado, feitas por quem tem diabetes pra quem tem diabetes." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Diabético Guloso — Volte a comer sobremesa sem culpa" />
+    <meta property="og:description" content="Mais de 50 receitas feitas pra quem tem diabetes. Brigadeiro, bolo, pudim e muito mais — com ingredientes de mercado." />
+    <meta property="og:image" content="./assets/hero-brigadeiro.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Diabético Guloso" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+
+    <!-- UTMify -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <!-- UTMify + TikTok Pixel -->
+    <script>
+      window.tikTokPixelId = "697b98715d904b777e865545";
+      var a = document.createElement("script");
+      a.setAttribute("async", ""); a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+      document.head.appendChild(a);
+    </script>
+    <!-- UTMify + Meta Pixel -->
+    <script>
+      window.pixelId = "6a1f8ea0c9e2eee869020d70";
+      var a = document.createElement("script");
+      a.setAttribute("async", ""); a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+    <!-- Vercel Analytics -->
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <style>
+      :root {
+        --forest: #153e34;
+        --leaf: #276749;
+        --mint: #e4f1ea;
+        --mint-2: #f3f8f4;
+        --gold: #d88a29;
+        --gold-2: #f6e1bd;
+        --ink: #20332d;
+        --muted: #63736d;
+        --line: #deebe4;
+        --cream: #fbfcf8;
+        --white: #fff;
+        --shadow: 0 18px 50px rgba(21,62,52,.14);
+        --radius: 10px;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--cream); color: var(--ink); font-family: "DM Sans", Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+      h1,h2,h3 { font-family: Lora, Georgia, serif; color: var(--forest); line-height: 1.12; }
+      h1 { font-size: clamp(2rem, 6vw, 3.2rem); }
+      h2 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
+      h3 { font-size: 1.15rem; }
+      .shell { width: min(720px, calc(100% - 32px)); margin-inline: auto; }
+      .wide  { width: min(1040px, calc(100% - 32px)); margin-inline: auto; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 6px; color: var(--leaf); font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 10px; }
+      .eyebrow svg { width: 14px; height: 14px; }
+
+      /* ── URGENCY BAR ── */
+      .urgency-bar { background: var(--gold); color: white; text-align: center; padding: 10px 16px; font-size: .84rem; font-weight: 800; letter-spacing: .01em; }
+      .urgency-bar span { opacity: .85; font-weight: 400; }
+
+      /* ── HEADER ── */
+      .header { background: var(--forest); padding: 14px 0; text-align: center; }
+      .logo { display: inline-block; width: min(220px, 58vw); filter: brightness(0) invert(1); opacity: .96; }
+
+      /* ── HERO ── */
+      .hero { background: var(--forest); padding: 48px 0 52px; text-align: center; color: white; }
+      .hero h1 { color: white; max-width: 680px; margin: 0 auto 16px; }
+      .hero p  { color: #d3e7dd; font-size: 1rem; line-height: 1.65; max-width: 560px; margin: 0 auto 28px; }
+      .hero-bullets { display: inline-grid; gap: 10px; text-align: left; margin-bottom: 30px; }
+      .hero-bullets li { display: flex; gap: 9px; align-items: flex-start; color: #c8dfd4; font-size: .9rem; font-weight: 700; list-style: none; }
+      .hero-bullets svg { flex-shrink: 0; width: 18px; height: 18px; color: #f2b85a; margin-top: 1px; }
+
+      /* ── CTA BUTTON ── */
+      .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 58px; padding: 0 32px; border-radius: 8px; background: var(--gold); color: white; font-family: "DM Sans", Arial, sans-serif; font-size: 1.05rem; font-weight: 800; border: none; cursor: pointer; animation: pulse 1.6s infinite; transition: transform .18s, box-shadow .18s; }
+      .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(216,138,41,.3); }
+      .btn-cta svg { width: 20px; height: 20px; }
+      .btn-cta.full { width: 100%; max-width: 480px; }
+      @keyframes pulse { 50% { transform: scale(1.03); box-shadow: 0 0 0 9px rgba(216,138,41,.12); } }
+      .btn-note { margin-top: 10px; color: #a9c8bb; font-size: .75rem; }
+
+      /* ── VIDEO PLACEHOLDER ── */
+      .video-wrap { margin: 36px auto 0; max-width: 580px; }
+      .video-placeholder { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.07); border: 2px dashed rgba(255,255,255,.2); }
+      .video-placeholder-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: rgba(255,255,255,.4); font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+      .video-placeholder-inner svg { width: 48px; height: 48px; opacity: .4; }
+
+      /* ── SECTION BASE ── */
+      .section { padding: 52px 0; }
+      .section.alt { background: white; }
+      .section.mint { background: var(--mint-2); }
+      .section-head { text-align: center; margin-bottom: 32px; }
+      .section-head p { margin-top: 10px; color: var(--muted); font-size: .95rem; line-height: 1.62; max-width: 580px; margin-inline: auto; }
+
+      /* ── PRODUCT MOCKUP ── */
+      .mockup-wrap { max-width: 480px; margin: 0 auto; }
+      .mockup-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: var(--radius); background: var(--mint); border: 2px dashed var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--muted); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+      .mockup-placeholder svg { width: 40px; height: 40px; opacity: .35; }
+
+      /* ── WHAT YOU GET ── */
+      .deliverables { display: grid; gap: 12px; max-width: 640px; margin: 0 auto; }
+      .deliverable { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 4px 16px rgba(21,62,52,.06); }
+      .deliverable-icon { flex-shrink: 0; display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--mint); }
+      .deliverable-icon svg { width: 22px; height: 22px; color: var(--leaf); }
+      .deliverable h3 { color: var(--forest); margin-bottom: 3px; }
+      .deliverable p { color: var(--muted); font-size: .87rem; line-height: 1.5; margin: 0; }
+      .deliverable .tag { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 20px; background: var(--gold-2); color: var(--gold); font-size: .7rem; font-weight: 800; }
+
+      /* ── DIFFERENTIALS ── */
+      .diffs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 680px; margin: 0 auto; }
+      .diff { padding: 20px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--mint-2); text-align: center; }
+      .diff svg { width: 32px; height: 32px; color: var(--leaf); margin: 0 auto 10px; }
+      .diff h3 { font-size: 1rem; margin-bottom: 5px; }
+      .diff p { color: var(--muted); font-size: .83rem; line-height: 1.5; }
+
+      /* ── PHOTO GRID PLACEHOLDER ── */
+      .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 640px; margin: 0 auto; }
+      .photo-placeholder { aspect-ratio: 3/4; border-radius: 8px; background: var(--mint); border: 2px dashed var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--muted); font-size: .65rem; font-weight: 700; text-transform: uppercase; text-align: center; padding: 8px; }
+      .photo-placeholder svg { width: 28px; height: 28px; opacity: .4; }
+
+      /* ── TESTIMONIALS ── */
+      .testimonials { display: grid; gap: 14px; }
+      .testimonial { padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+      .testimonial-top { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+      .avatar-placeholder { flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%; background: var(--mint); border: 2px dashed var(--line); display: grid; place-items: center; }
+      .avatar-placeholder svg { width: 22px; height: 22px; color: var(--muted); opacity: .5; }
+      .testimonial-meta strong { display: block; color: var(--forest); font-size: .88rem; }
+      .testimonial-meta span { color: var(--muted); font-size: .75rem; }
+      .stars { color: var(--gold); font-size: .82rem; letter-spacing: 2px; margin-bottom: 6px; }
+      .testimonial p { color: #53655e; font-size: .88rem; line-height: 1.62; }
+
+      /* ── PRICE ── */
+      .price-card { max-width: 560px; margin-inline: auto; padding: 32px 28px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: var(--shadow); text-align: center; }
+      .today-tag { display: inline-block; margin-bottom: 12px; padding: 4px 14px; border-radius: 20px; background: #fff3e0; color: #a45c00; font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+      .old-price { color: var(--muted); font-size: 1rem; text-decoration: line-through; }
+      .price-value { display: block; margin: 4px 0 4px; color: var(--forest); font-family: Lora, Georgia, serif; font-size: 3.2rem; font-weight: 700; line-height: 1; }
+      .price-note { color: var(--leaf); font-size: .85rem; font-weight: 800; margin-bottom: 20px; }
+      .price-sub { margin-top: 12px; color: var(--muted); font-size: .78rem; }
+
+      /* ── GUARANTEE ── */
+      .guarantee { display: flex; gap: 16px; align-items: center; max-width: 580px; margin: 0 auto; padding: 22px; border: 1px solid #c6dfd0; border-radius: var(--radius); background: var(--mint-2); }
+      .guarantee svg { flex-shrink: 0; width: 52px; height: 52px; color: var(--leaf); }
+      .guarantee h3 { margin-bottom: 5px; }
+      .guarantee p { color: var(--muted); font-size: .87rem; line-height: 1.55; margin: 0; }
+
+      /* ── FAQ ── */
+      .faq { display: grid; gap: 8px; max-width: 640px; margin: 0 auto; }
+      details { border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+      summary { padding: 16px 18px; color: var(--forest); cursor: pointer; font-size: .92rem; font-weight: 800; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+      summary::after { content: "+"; font-size: 1.2rem; font-weight: 400; color: var(--leaf); flex-shrink: 0; }
+      details[open] summary::after { content: "−"; }
+      details p { margin: 0; padding: 0 18px 16px; color: var(--muted); font-size: .87rem; line-height: 1.58; }
+
+      /* ── FOOTER ── */
+      .footer { padding: 26px 20px; background: var(--forest); color: #c8ddd4; text-align: center; font-size: .74rem; line-height: 1.7; }
+
+      /* ── STICKY CTA BAR (mobile) ── */
+      .sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; padding: 12px 16px; background: var(--forest); border-top: 1px solid rgba(255,255,255,.1); box-shadow: 0 -4px 20px rgba(0,0,0,.18); }
+      .sticky-bar .btn-cta { width: 100%; max-width: 100%; min-height: 50px; font-size: .94rem; animation: none; }
+
+      /* ── RESPONSIVE ── */
+      @media (min-width: 640px) {
+        .testimonials { grid-template-columns: repeat(2, 1fr); }
+        .diffs { grid-template-columns: repeat(4, 1fr); }
+        .photo-grid { grid-template-columns: repeat(4, 1fr); }
+      }
+      @media (max-width: 480px) {
+        .hero { padding: 36px 0 40px; }
+        .sticky-bar { display: block; }
+        body { padding-bottom: 74px; }
+        .diffs { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+
+      /* SVG helpers */
+      svg.icon { display: inline-block; vertical-align: middle; }
+    </style>
+  </head>
+  <body>
+
+    <!-- URGENCY BAR -->
+    <div class="urgency-bar">
+      🔥 Oferta especial ativa agora — <span>R$131,00 por apenas R$19,90</span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <img class="logo" src="./assets/logo-diabetico-guloso.svg" alt="Diabético Guloso" />
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="shell">
+        <p class="eyebrow" style="justify-content:center;color:#b6dfc8;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+          Mais de 12.000 mulheres já descobriram
+        </p>
+        <h1>Volte a comer sobremesa sem medo e sem culpa.</h1>
+        <p>Receitas de brigadeiro, bolo, pudim e muito mais — feitas por quem tem diabetes, com ingredientes de mercado, em até 15 minutos.</p>
+        <ul class="hero-bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            Mais de 50 receitas organizadas por categoria
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            Sem açúcar refinado — menor impacto glicêmico
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            Ingredientes fáceis de encontrar no mercado
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            Acesso imediato pelo celular
+          </li>
+        </ul>
+        <a class="btn-cta" href="https://pay.cakto.com.br/r5zrbb2_910214">
+          Quero meu acesso por R$19,90
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <p class="btn-note">Pagamento único • Acesso imediato • 7 dias de garantia</p>
+
+        <!-- VIDEO PLACEHOLDER -->
+        <div class="video-wrap">
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+              📹 Coloque seu vídeo aqui
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT MOCKUP -->
+    <section class="section alt">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12m-2-5h20v5H2zM12 22V7m0 0H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/></svg>
+            O produto
+          </p>
+          <h2>Conheça o Diabético Guloso</h2>
+          <p>Um app completo com receitas organizadas, lista de compras e acesso direto pelo celular — sem instalar nada.</p>
+        </div>
+        <div class="mockup-wrap">
+          <div class="mockup-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            📱 Coloque o mockup do produto aqui
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section mint">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12m-2-5h20v5H2zM12 22V7m0 0H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/></svg>
+            Tudo que você recebe
+          </p>
+          <h2>Seu pacote completo</h2>
+        </div>
+        <div class="deliverables">
+          <div class="deliverable">
+            <div class="deliverable-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+            </div>
+            <div>
+              <h3>Diabético Guloso — App de Receitas</h3>
+              <p>Mais de 50 receitas organizadas por categoria: brigadeiros, bolos, pudins, mousses e tortas. Acesso imediato pelo celular.</p>
+              <span class="tag">R$67 incluso</span>
+            </div>
+          </div>
+          <div class="deliverable">
+            <div class="deliverable-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12m-2-5h20v5H2zM12 22V7"/></svg>
+            </div>
+            <div>
+              <h3>Bônus 1 — Lista de Compras para Diabéticos</h3>
+              <p>Lista completa com os ingredientes certos para ter sempre em casa e nunca ficar sem opção.</p>
+              <span class="tag">R$17 incluso</span>
+            </div>
+          </div>
+          <div class="deliverable">
+            <div class="deliverable-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div>
+              <h3>Bônus 2 — Acesso ao App Diabético Guloso</h3>
+              <p>Tenha todas as receitas organizadas no app, com busca por categoria e tempo de preparo.</p>
+              <span class="tag">R$47 incluso</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="section alt">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Por que o Diabético Guloso é diferente</h2>
+        </div>
+        <div class="diffs">
+          <div class="diff">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+            <h3>Feito por quem tem diabetes</h3>
+            <p>Receitas criadas na prática, testadas na cozinha de casa.</p>
+          </div>
+          <div class="diff">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C11 3 5 7 5 13c0 3 2 5 5 5 6 0 10-6 10-14Z"/><path d="M4 20c3-5 7-8 12-10"/></svg>
+            <h3>Ingredientes de mercado</h3>
+            <p>Nada exótico. Tudo que você encontra no mercado do bairro.</p>
+          </div>
+          <div class="diff">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <h3>Prontas em até 15 minutos</h3>
+            <p>Simples o suficiente pra qualquer nível na cozinha.</p>
+          </div>
+          <div class="diff">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            <h3>Acesso pelo celular</h3>
+            <p>Consulte qualquer receita na hora que precisar, direto no celular.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GRID (receitas) -->
+    <section class="section mint">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+            Exemplos do que você vai encontrar
+          </p>
+          <h2>Algumas das receitas do seu plano</h2>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto receita 1
+          </div>
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto receita 2
+          </div>
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto receita 3
+          </div>
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto receita 4
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section alt">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow" style="justify-content:center;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+            Histórias reais
+          </p>
+          <h2>Quem experimentou conta assim</h2>
+        </div>
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="testimonial-top">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div class="testimonial-meta">
+                <div class="stars">★★★★★</div>
+                <strong>Dona Aparecida</strong>
+                <span>58 anos, São Paulo</span>
+              </div>
+            </div>
+            <p>"Faz quatro anos que eu não comia sobremesa de verdade. Fiz o brigadeiro na primeira semana e no aniversário do meu marido levei o bolo. Todo mundo comeu junto."</p>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-top">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div class="testimonial-meta">
+                <div class="stars">★★★★★</div>
+                <strong>Maria Lúcia</strong>
+                <span>52 anos, Belo Horizonte</span>
+              </div>
+            </div>
+            <p>"Eu sou péssima na cozinha. O pudim de chocolate foi a primeira receita que fiz. Minha filha provou e perguntou onde eu tinha comprado."</p>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-top">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div class="testimonial-meta">
+                <div class="stars">★★★★★</div>
+                <strong>Rosângela</strong>
+                <span>61 anos, Curitiba</span>
+              </div>
+            </div>
+            <p>"Passei dois anos me sentindo punida. Na última festa de família eu levei a torta e todo mundo adorou."</p>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-top">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div class="testimonial-meta">
+                <div class="stars">★★★★★</div>
+                <strong>Nair</strong>
+                <span>63 anos, Porto Alegre</span>
+              </div>
+            </div>
+            <p>"Minha neta pediu o brigadeiro de novo. Ela não sabe que é receita para diabético. Isso já diz tudo."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE -->
+    <section class="section mint">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Garanta seu acesso agora</h2>
+        </div>
+        <div class="price-card">
+          <span class="today-tag">Oferta válida apenas hoje</span>
+          <p class="old-price">Valor total: R$131,00</p>
+          <strong class="price-value">R$19,90</strong>
+          <p class="price-note">Você economiza R$111,10 • 85% de desconto</p>
+          <a class="btn-cta full" href="https://pay.cakto.com.br/r5zrbb2_910214">
+            Quero meu acesso por R$19,90
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <p class="price-sub">Pagamento único • Acesso imediato pelo celular</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section alt">
+      <div class="shell">
+        <div class="guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div>
+            <h3>Garantia incondicional de 7 dias</h3>
+            <p>Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Pediu, devolvemos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECOND PRICE -->
+    <section class="section mint">
+      <div class="shell">
+        <div class="price-card">
+          <span class="today-tag">Comece hoje</span>
+          <p class="old-price">Valor total: R$131,00</p>
+          <strong class="price-value">R$19,90</strong>
+          <p class="price-note">Economize R$111,10 hoje</p>
+          <a class="btn-cta full" href="https://pay.cakto.com.br/r5zrbb2_910214">
+            Quero meu acesso por R$19,90
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <p class="price-sub">Acesso imediato após a compra</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Preciso saber cozinhar?</summary>
+            <p>Não. As receitas foram criadas para qualquer nível — inclusive para quem prefere preparos simples e rápidos.</p>
+          </details>
+          <details>
+            <summary>Os ingredientes são difíceis de encontrar?</summary>
+            <p>Não. Todas as receitas usam ingredientes comuns de mercado. Nada exótico ou caro.</p>
+          </details>
+          <details>
+            <summary>Funciona para qualquer tipo de diabetes?</summary>
+            <p>As receitas são adaptadas para reduzir o impacto glicêmico. Continue monitorando sua glicemia conforme orientação do seu médico.</p>
+          </details>
+          <details>
+            <summary>Como vou acessar as receitas?</summary>
+            <p>Após a compra, você recebe acesso imediato ao app Diabético Guloso direto pelo celular — sem precisar instalar nada.</p>
+          </details>
+          <details>
+            <summary>E se eu não gostar?</summary>
+            <p>Você tem 7 dias de garantia incondicional. Pediu, devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="wide">
+        Diabético Guloso • Receitas gostosas para uma rotina mais leve.<br/>
+        Monitore sua glicemia conforme a orientação do seu profissional de saúde.
+      </div>
+    </footer>
+
+    <!-- STICKY BAR MOBILE -->
+    <div class="sticky-bar">
+      <a class="btn-cta" href="https://pay.cakto.com.br/r5zrbb2_910214">
+        Quero meu acesso por R$19,90
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+    </div>
+
+  </body>
+</html>
