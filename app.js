@@ -1,5 +1,5 @@
 const CONFIG = {
-  checkoutUrl: "https://pay.cakto.com.br/r5zrbb2_910214",
+  checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=b4CQm6",
 };
 
 const icon = (name) => {
