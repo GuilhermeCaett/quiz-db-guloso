@@ -398,22 +398,50 @@
           <h2>Garanta a promoção hoje</h2>
         </div>
         <div class="price-card">
-          <span class="today-tag">Oferta válida apenas hoje</span>
-          <img src="./assets/mockup-app.png" alt="App Diabético Guloso" style="max-width:220px; margin:16px auto; display:block; filter: drop-shadow(0 8px 20px rgba(21,62,52,.15));" />
-          <p class="old-price">Valor total: R$131,00</p>
+          <span class="today-tag">⚡ Oferta válida apenas hoje</span>
+
+          <!-- PRODUTOS INCLUSOS -->
+          <div style="display:flex; gap:12px; justify-content:center; margin:18px 0 20px;">
+            <div style="flex:1; max-width:160px; background:var(--mint-2); border:1px solid var(--line); border-radius:var(--r); padding:14px 10px; text-align:center;">
+              <img src="./assets/mockup-app.png" alt="App Diabético Guloso" style="width:80px; margin:0 auto 8px; display:block; filter:drop-shadow(0 4px 10px rgba(21,62,52,.15));" />
+              <p style="font-size:.72rem; font-weight:800; color:var(--forest); line-height:1.3; margin:0;">📱 Diabético Guloso<br/><span style="color:var(--leaf);">App de Receitas</span></p>
+            </div>
+            <div style="display:flex; align-items:center; font-size:1.4rem; color:var(--gold); font-weight:800;">+</div>
+            <div style="flex:1; max-width:160px; background:var(--gold-2); border:1px solid #e8c97a; border-radius:var(--r); padding:14px 10px; text-align:center;">
+              <div style="font-size:2.4rem; margin-bottom:8px;">🌅</div>
+              <p style="font-size:.72rem; font-weight:800; color:var(--forest); line-height:1.3; margin:0;">🎁 Bônus<br/><span style="color:var(--gold);">Café da Manhã<br/>para Diabéticos</span></p>
+            </div>
+          </div>
+
+          <!-- PREÇO -->
+          <p class="old-price">De: R$131,00</p>
           <strong class="price-val">R$19,90</strong>
-          <p class="price-disc">Você economiza R$111,10 • 85% de desconto</p>
-          <a class="btn full" href="https://pay.lowify.com.br/checkout?product_id=b4CQm6">
-            QUERO O MEU ACESSO!
+          <p class="price-disc">✅ Você economiza R$111,10 — 85% de desconto</p>
+
+          <!-- CTA -->
+          <a class="btn full" href="https://pay.lowify.com.br/checkout?product_id=b4CQm6" style="margin:4px auto 12px;">
+            QUERO O MEU ACESSO AGORA!
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
           </a>
+
+          <!-- PAGAMENTO -->
+          <div style="display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; margin-bottom:14px;">
+            <span style="font-size:.7rem; color:var(--muted); font-weight:700;">🔒 Pagamento seguro:</span>
+            <span style="font-size:.75rem; background:#f4f4f4; border:1px solid #ddd; border-radius:4px; padding:2px 7px; font-weight:800; color:#1a1f71;">VISA</span>
+            <span style="font-size:.75rem; background:#f4f4f4; border:1px solid #ddd; border-radius:4px; padding:2px 7px; font-weight:800; color:#eb001b;">Master</span>
+            <span style="font-size:.75rem; background:#f4f4f4; border:1px solid #ddd; border-radius:4px; padding:2px 7px; font-weight:800; color:#32bcad;">PIX</span>
+            <span style="font-size:.75rem; background:#f4f4f4; border:1px solid #ddd; border-radius:4px; padding:2px 7px; font-weight:800; color:#003087;">Boleto</span>
+          </div>
+
           <p class="price-sub">Pagamento único • Acesso imediato pelo celular</p>
-        </div>
-        <div class="guarantee">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div>
-            <h3>Garantia incondicional de 7 dias</h3>
-            <p>Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+
+          <!-- GARANTIA DENTRO DO CARD -->
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-top:16px; padding:14px; background:var(--mint-2); border-radius:8px; border:1px solid var(--line); text-align:left;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; width:32px; height:32px; color:var(--leaf); margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <p style="font-weight:800; color:var(--forest); font-size:.85rem; margin-bottom:3px;">Garantia incondicional de 7 dias</p>
+              <p style="color:var(--muted); font-size:.78rem; line-height:1.5; margin:0;">Se não gostar, devolvemos 100% do valor. Sem perguntas, sem burocracia.</p>
+            </div>
           </div>
         </div>
       </div>
