@@ -496,6 +496,19 @@
       </a>
     </div>
 
+    <!-- STICKY HIDE ON DTC -->
+    <script>
+      (function () {
+        var sticky = document.querySelector('.sticky-bar');
+        var oferta = document.getElementById('oferta');
+        if (!sticky || !oferta) return;
+        var observer = new IntersectionObserver(function (entries) {
+          sticky.style.display = entries[0].isIntersecting ? 'none' : '';
+        }, { threshold: 0.1 });
+        observer.observe(oferta);
+      })();
+    </script>
+
     <!-- TIMER SCRIPT -->
     <script>
       (function () {
