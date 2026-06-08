@@ -210,11 +210,6 @@
       🎉 Oferta especial: compre o Diabético Guloso e leve também as <span>Receitas de Café da Manhã para Diabéticos de bônus</span>
     </div>
 
-    <!-- 1B. TIMER BAR -->
-    <div class="timer-bar">
-      ⚠️ Esta oferta expira em: <span id="countdown">10:00</span>
-    </div>
-
     <!-- HEADER -->
     <header class="header">
       <img class="logo" src="./assets/logo-diabetico-guloso.svg" alt="Diabético Guloso" />
@@ -509,32 +504,6 @@
       })();
     </script>
 
-    <!-- TIMER SCRIPT -->
-    <script>
-      (function () {
-        var KEY = 'dbg_lp_timer_10m';
-        var DURATION = 10 * 60;
-        var stored = localStorage.getItem(KEY);
-        var end;
-        if (stored) {
-          end = parseInt(stored, 10);
-        } else {
-          end = Math.floor(Date.now() / 1000) + DURATION;
-          localStorage.setItem(KEY, end);
-        }
-        function pad(n) { return n < 10 ? '0' + n : n; }
-        function tick() {
-          var diff = end - Math.floor(Date.now() / 1000);
-          if (diff <= 0) { diff = 0; }
-          var m = Math.floor(diff / 60);
-          var s = diff % 60;
-          var el = document.getElementById('countdown');
-          if (el) el.textContent = pad(m) + ':' + pad(s);
-        }
-        tick();
-        setInterval(tick, 1000);
-      })();
-    </script>
 
   </body>
 </html>
